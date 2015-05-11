@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+import colors as c
+
+def lol():
+    while True:
+        try:
+            blah=input("Name?").strip().title()
+        except (KeyboardInterrupt, EOFError):
+            continue    
+        if blah:
+            break
+        else:
+            continue
+
+def start():
+    print(c.clear)
+    name=input(c.orange+"What is your name?"+c.reset+">>>"+c.violet).strip().title()
+    if name=="":
+        input("Don't be shy, say something!")
+        start()
+    elif name=="Jack":
+        input("Don't copy me.")
+        start()
+    elif name=="Lol()":
+        lol()
+    
+    else:
+        input(c.orange+"Nice to meet you, "+c.violet+name)
+        start()
+start()
