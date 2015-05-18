@@ -1,67 +1,19 @@
 import random as r
-import colors as c
-sides=[None]
-sides.append('''
- -------
-|       |
-|   •   |
-|       |
- -------
-''')
 
-sides.append('''
- -------
-| •     |
-|       |
-|     • |
- -------
-''')
+def roll(howmany=1,sides=6):
+    total=0
+    for count in range(howmany):
+        print(howmany)
+        total += rolldie(sides)     
+    return total
 
-sides.append('''
- -------
-| •     |
-|   •   |
-|     • |
- -------
-''')
-sides.append('''
- -------
-| •   • |
-|       |
-| •   • |
- -------
-''')
 
-sides.append('''
- -------
-| •   • |
-|   •   |
-| •   • |
- -------
-''')
+def rolldie(sides=6):#Makes sides defaultly set to 6
+    return r.randint(1,sides)
 
-sides.append('''
- -------
-| •   • |
-| •   • |
-| •   • |
- -------
-''')
-how_many=1
-print(c.clear)
-while True:
-    how=input('How many dice? ').strip().lower()
-    if not how:
-        how=last
-    elif how=="bye":
-        exit()
-    else:
-        how=int(how)
-        last=how
-    print(c.clear)
-    for count in range(how):
-        number=r.randint(1,6)
-        print(c.blue+''+sides[number].strip()+c.reset)
+if __name__=='__main__':
+    import colors as c
+    foo=rolldie(6)
+    for count in range(20):
+        print(c.red+str(foo),end=' ')
 
-if __name__='__main__':
-    roll()
