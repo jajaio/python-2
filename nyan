@@ -24,6 +24,7 @@ while True:
         print(cat)
         continue
     except(EOFError):
-        input(t.sleep(1)+cat)
+        input(cat)
+        t.sleep(1)
         continue
 
