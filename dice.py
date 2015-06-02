@@ -3,7 +3,6 @@ import random as r
 def roll(howmany=1,sides=6):
     total=0
     for count in range(howmany):
-        print(howmany)
         total += rolldie(sides)#works off of rolldie funct.     
     return total
 
@@ -25,8 +24,8 @@ if __name__=='__main__':
     print(parse_roll('2d10'))
     exit()
     def testrolldie(sides):
-        foo=rolldie(6)
         for count in range(20):
+            foo=rolldie(6)
             print(c.red + str(foo), end=' ')
 
         print(c.clear)

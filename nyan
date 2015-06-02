@@ -21,9 +21,12 @@ while True:
     try:
         print("Nyan", end=' ')
     except(KeyboardInterrupt):
-        print(cat)
-        t.sleep(1)
-        continue
+        try:
+            print(cat)
+            t.sleep(1)
+            continue
+        except(KeyboardInterrupt):
+            continue
     except(EOFError):
         input(cat)
         t.sleep(1)
