@@ -2,7 +2,8 @@ from dice import roll
 import colors as c
 import json
 class HasStats():
-    health=100
+    hp=100
+    lvl=1
 
     def set_stats(self):
         self.strength=roll(3,6)

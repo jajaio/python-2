@@ -25,10 +25,26 @@ class Game():
         count=1
         for monster in m.monsters:
             pickstr=c.base3+"{}. "+c.random_color()+"{}"+c.reset
-            print(pickstr,format(count,monster.title))
+            print(pickstr.format(count,monster.title))
             monster.show_stats()
                 
-    
+    def handle_battle(self):
+        while self.player.hp > 0 and self.monster.hp > 0:
+            get_player_move()
+            if self.player.speed >= self.monster.speed:
+                self.player.do(move)
+                self.monster.do()
+            else:
+                self.monster.do()
+                self.player.do(move)
+        if self.player.hp > 0:     #WIN!
+            self.player.xp +=self.monster.xp
+        else:
+            self.player.hp -=self.monster.xp
+    def save(self):
+        self.player.save()
+        print("Player State Saved.")
+
 
 if __name__=='__main__':
     agame=Game()
