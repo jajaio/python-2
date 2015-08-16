@@ -1,6 +1,6 @@
 from dice import roll
 from interfaces import HasStats
-from utils.py import ask
+from utils import ask
 import colors as c
 
 class Player(HasStats):

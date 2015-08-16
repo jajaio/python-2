@@ -47,6 +47,6 @@ class HasStats():
 if __name__=='__main__':
     bloo=HasStats()
     bloo.set_stats()
+    bloo.show_stats()
     bloo.save()
     bloo.load()
-

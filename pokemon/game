@@ -2,16 +2,20 @@
 
 from player import Player
 import monster as m
+from utils import ask
+def helpmenu():
+    print("Soon to be help menu!")
+
+
 class Game():
     def __init__(self):
         print('Welcome to the game')
         self.player=Player()
     
     def run(self):
-        self.player.show_stats()
         while True:
             self.player.show_stats()
-            action=input('What do you wanna do?')
+            action=input("What do you wanna do? (Type in 'h' to load the help menu.)")
             if action=="stats":
                 self.player.show_stats()
             elif action=="save":
@@ -21,6 +25,12 @@ class Game():
                 exit()
             elif action=="monster":
                 count=1
+            elif action=="h":
+                helpmenu()
+            else:
+                print("Unknown Command.")
+    
+    
     def pick_monster(self):
         count=1
         for monster in m.monsters:
