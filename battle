@@ -128,7 +128,7 @@ def selec():
         input("No one likes you, Bobe.")
         selec()
     elif lolint=="hero":
-        input("You have chosen the class, Hero!")
+        input("You have chosen the class Hero!")
         Player.hp=Hero.hp
         Player.heals=Hero.heals
         difi()
