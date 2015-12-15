@@ -1,10 +1,7 @@
-# python-2
-My Python-2 Repo for SkilStak Coding arts.
+# python-sandbox
+A Repo for random Python Files
 
-The main focus of this repo is the Text Based Engine based off of "Pokemon"
-It is likely that the project will not be finished but the repo will stay up
-for reference on later projects.
-
-The "Battle" file was not made in python-2. I just want this up on
-github. Most likely will strip the game and keep it as a text based
-battle engine for Project: AlphaQuest
+# Fight your Foe
+My very first game, full of 'noob' mistakes but I'm keeping it the way
+I first made it. Most likely being stripped as a battle engine for my
+project: "AlphaQuest"
